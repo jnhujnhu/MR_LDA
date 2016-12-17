@@ -22,7 +22,7 @@ public class KeyValueParser {
         for(int z : Z) {
             Z_str += (Integer.toString(z) + " ");
         }
-        return W_str + "$" + Z_str;
+        return W_str + "\t" + Z_str;
     }
 
     public static String encodeWZ(int[][] WZ) {
@@ -33,7 +33,7 @@ public class KeyValueParser {
         for(int z : WZ[1]) {
             Z_str += (Integer.toString(z) + " ");
         }
-        return W_str + "$" + Z_str;
+        return W_str + "\t" + Z_str;
     }
 
     public static String encodeWCi(int[][] WC, int voc_no) {
@@ -54,14 +54,9 @@ public class KeyValueParser {
         return C_str;
     }
 
-    //TODO
-    public static long decodeKey(String key) {
-        return 0;
-    }
-
     public static int[][] decodeWZ(String WZ) {
         int[][] WZ_v = new int[2][Max_Word_PerDoc];
-        String[] WZ_divide = WZ.split("$");
+        String[] WZ_divide = WZ.split("\t");
         String[] W_str = WZ_divide[0].split(" ");
         String[] Z_str = WZ_divide[1].split(" ");
         for(int i = 0; i < Max_Word_PerDoc; i++) {

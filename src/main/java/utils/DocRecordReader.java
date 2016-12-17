@@ -63,7 +63,7 @@ public class DocRecordReader extends RecordReader<LongWritable, Text> {
         // This is where you should implement your custom logic.
         Text line = lineRecordReader.getCurrentValue();
         String str = line.toString();
-        int blank_pos = str.indexOf(" ");
+        int blank_pos = str.indexOf('\t');
         Long doc_num = Long.parseLong(str.substring(0, blank_pos));
 
         key = new LongWritable(doc_num);

@@ -25,7 +25,6 @@ public class InitMapper extends Mapper<LongWritable, Text, Text, Text> {
     @Override
     public void setup(Context context)throws IOException, InterruptedException {
         WC = new int[Vocabulary_No + 1][K + 1];
-
         //Build WordMap<Term, TermID>
         VID = VariableLoader.Load_WordMap("/users/rocks5/13307130228/corpus/wordmap.ml");
     }

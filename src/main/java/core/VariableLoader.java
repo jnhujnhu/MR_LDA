@@ -32,7 +32,7 @@ public class VariableLoader {
                     while (scanner.hasNext()) {
                         int num = scanner.nextInt();
                         C[V_pos + 1][K_pos + 1] = num;
-                        K_pos++;
+                        K_pos ++;
                         V_pos += K_pos / K;
                         K_pos %= K;
                     }
