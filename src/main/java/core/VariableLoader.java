@@ -45,6 +45,7 @@ public class VariableLoader {
         return C;
     }
 
+
     public static HashMap<String, Integer> Load_WordMap(String WM_Path) throws IOException {
         HashMap<String, Integer> VID = new HashMap<String, Integer>();
         FileSystem fileSystem = FileSystem.get(new Configuration());
